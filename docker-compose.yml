@@ -1,0 +1,16 @@
+version: '3'
+services:
+  node-dev-app:
+    build: .
+    image: node-dev-app
+    command: npm run dev
+    environment:
+      - ${PORT}:${PORT}
+    ports:
+      - ${PORT}:${PORT}
+    volumes:
+      - ./:/app/
+      - nodemodules:/app/node_modules
+
+volumes:
+  nodemodules: {}
