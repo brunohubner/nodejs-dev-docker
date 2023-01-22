@@ -1,0 +1,1 @@
+# Node.js development environment configured with Docker
